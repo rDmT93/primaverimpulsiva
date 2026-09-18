@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useLanguage } from '../i18n/LanguageContext.tsx'
+import logoMark from '../assets/logo-mark.png'
 
 const NAV_KEYS = ['about', 'services', 'projects', 'contact'] as const
 
@@ -11,7 +12,7 @@ function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <a className="brand" href="#top" onClick={() => setMenuOpen(false)}>
-          <span className="brand-mark">BR</span>
+          <img className="brand-mark" src={logoMark} alt={t.brand.name} />
           <span className="brand-name">{t.brand.name}</span>
         </a>
 
