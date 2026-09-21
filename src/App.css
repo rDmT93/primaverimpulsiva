@@ -85,7 +85,7 @@
 
 .brand-mark {
   display: block;
-  height: 40px;
+  height: 52px;
   width: auto;
 }
 
@@ -801,7 +801,7 @@ body:has(.photo-gallery[open]) {
 }
 
 .footer-inner .brand-mark {
-  height: 40px;
+  height: 48px;
   padding: 4px 8px;
   background: #fff;
   border-radius: 8px;
