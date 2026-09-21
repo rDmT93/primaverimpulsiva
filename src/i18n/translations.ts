@@ -73,7 +73,7 @@ export interface Translations {
     }
   }
   footer: {
-    rights: string
+    company: string
     license: string
   }
   lang: {
@@ -186,7 +186,7 @@ const translations: Record<Lang, Translations> = {
       },
     },
     footer: {
-      rights: 'Todos os direitos reservados.',
+      company: 'Primaverimpulsiva - Unipessoal Lda · NIF 518937747',
       license: 'Licença n.º GC-00000 · Totalmente Segurados',
     },
     lang: {
@@ -297,7 +297,7 @@ const translations: Record<Lang, Translations> = {
       },
     },
     footer: {
-      rights: 'All rights reserved.',
+      company: 'Primaverimpulsiva - Unipessoal Lda · NIF 518937747',
       license: 'Licence No. GC-00000 · Fully Insured',
     },
     lang: {
