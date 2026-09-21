@@ -6,7 +6,6 @@ export type ServiceIcon =
   | 'plumbing'
   | 'climate'
   | 'electrical'
-  | 'airconditioning'
   | 'vacuum'
   | 'ventilation'
 
@@ -56,7 +55,7 @@ export interface Translations {
     eyebrow: string
     title: string
     lead: string
-    info: { label: string; value: string; href?: string }[]
+    info: { label: string; values: { text: string; href?: string }[] }[]
     whatsapp: string
     whatsappMessage: string
     instagram: string
@@ -148,7 +147,6 @@ const translations: Record<Lang, Translations> = {
         { icon: 'plumbing', title: 'Canalização', text: 'Instalação e manutenção de redes hidráulicas.' },
         { icon: 'climate', title: 'Climatização', text: 'Instalação e manutenção de sistemas de climatização.' },
         { icon: 'electrical', title: 'Eletricidade', text: 'Instalações elétricas gerais e manutenção.' },
-        { icon: 'airconditioning', title: 'Ar Condicionado', text: 'Instalação e manutenção de ar condicionado.' },
         { icon: 'vacuum', title: 'Aspiração Central', text: 'Instalação de sistemas de aspiração central.' },
         { icon: 'ventilation', title: 'Ventilação Mecânica', text: 'Instalação e manutenção de sistemas de ventilação.' },
       ],
@@ -173,8 +171,17 @@ const translations: Record<Lang, Translations> = {
       instagram: 'Seguir no Instagram',
       mascotAlt: 'Gato com capacete de obra',
       info: [
-        { label: 'Telefone', value: '(+351) 934867205', href: 'tel:+351934867205' },
-        { label: 'Email', value: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' },
+        {
+          label: 'Telefone',
+          values: [
+            { text: '(+351) 934867205', href: 'tel:+351934867205' },
+            { text: '(+351) 910672446', href: 'tel:+351910672446' },
+          ],
+        },
+        {
+          label: 'Email',
+          values: [{ text: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' }],
+        },
       ],
       form: {
         name: 'Nome',
@@ -261,7 +268,6 @@ const translations: Record<Lang, Translations> = {
         { icon: 'plumbing', title: 'Plumbing', text: 'Installation and maintenance of hydraulic networks.' },
         { icon: 'climate', title: 'Climate Control', text: 'Installation and maintenance of climate control systems.' },
         { icon: 'electrical', title: 'Electrical', text: 'General electrical installations and maintenance.' },
-        { icon: 'airconditioning', title: 'Air Conditioning', text: 'Installation and maintenance of air conditioning.' },
         { icon: 'vacuum', title: 'Central Vacuum', text: 'Installation of central vacuum systems.' },
         { icon: 'ventilation', title: 'Mechanical Ventilation', text: 'Installation and maintenance of ventilation systems.' },
       ],
@@ -286,8 +292,17 @@ const translations: Record<Lang, Translations> = {
       instagram: 'Follow on Instagram',
       mascotAlt: 'Cat wearing a hard hat',
       info: [
-        { label: 'Phone', value: '(+351) 934867205', href: 'tel:+351934867205' },
-        { label: 'Email', value: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' },
+        {
+          label: 'Phone',
+          values: [
+            { text: '(+351) 934867205', href: 'tel:+351934867205' },
+            { text: '(+351) 910672446', href: 'tel:+351910672446' },
+          ],
+        },
+        {
+          label: 'Email',
+          values: [{ text: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' }],
+        },
       ],
       form: {
         name: 'Name',

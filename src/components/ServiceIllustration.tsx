@@ -54,21 +54,6 @@ const ILLUSTRATIONS: Record<ServiceIcon, ReactNode> = {
       <path className="anim-spark" d="M76 20 l6 -4 M80 34 h8 M16 30 l-6 -3" />
     </>
   ),
-  airconditioning: (
-    <>
-      <rect x="10" y="16" width="76" height="26" rx="5" />
-      <line x1="18" y1="34" x2="78" y2="34" />
-      <circle cx="74" cy="25" r="2" />
-      {[26, 48, 70].map((x, i) => (
-        <path
-          key={x}
-          className="anim-air"
-          style={{ '--i': i } as CSSProperties}
-          d={`M${x} 50 c-7 8 7 14 0 22 c-5 6 3 10 0 14`}
-        />
-      ))}
-    </>
-  ),
   vacuum: (
     <>
       <circle cx="74" cy="48" r="14" />

@@ -6,7 +6,7 @@ import liaImage from '../assets/lia.jpg'
 const CONTACT_EMAIL = 'primaverimpulsiva.lda@gmail.com'
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
 
-const WHATSAPP_NUMBER = '351934867205'
+const WHATSAPP_NUMBER = '351910672446'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
@@ -48,10 +48,14 @@ function Contact() {
             {contact.info.map((item) => (
               <li key={item.label}>
                 <span className="contact-label">{item.label}</span>
-                {item.href ? (
-                  <a href={item.href}>{item.value}</a>
-                ) : (
-                  <span>{item.value}</span>
+                {item.values.map((value) =>
+                  value.href ? (
+                    <a key={value.text} href={value.href}>
+                      {value.text}
+                    </a>
+                  ) : (
+                    <span key={value.text}>{value.text}</span>
+                  ),
                 )}
               </li>
             ))}

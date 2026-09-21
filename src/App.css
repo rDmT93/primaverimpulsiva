@@ -310,7 +310,7 @@
 }
 
 .service-card {
-  flex: 0 1 calc((100% - 72px) / 4);
+  flex: 0 1 calc((100% - 48px) / 3);
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -389,12 +389,6 @@
   animation: spark 2s ease-in-out infinite;
 }
 
-.anim-air {
-  stroke-dasharray: 5 7;
-  animation: air-flow 1.4s linear infinite;
-  animation-delay: calc(var(--i) * 0.25s);
-}
-
 .anim-dust {
   fill: currentColor;
   stroke: none;
@@ -438,10 +432,6 @@
   0%, 100% { opacity: 0; }
   10%, 30% { opacity: 1; }
   20%, 45% { opacity: 0.1; }
-}
-
-@keyframes air-flow {
-  to { stroke-dashoffset: -24; }
 }
 
 @keyframes dust-in {
