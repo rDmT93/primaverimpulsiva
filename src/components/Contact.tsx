@@ -1,7 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { useLanguage } from '../i18n/LanguageContext.tsx'
 import { INSTAGRAM_URL } from '../constants.ts'
-import liaImage from '../assets/lia.jpg'
 
 const CONTACT_EMAIL = 'primaverimpulsiva.lda@gmail.com'
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
@@ -87,8 +86,6 @@ function Contact() {
               {contact.instagram}
             </a>
           </div>
-
-          <img className="contact-mascot" src={liaImage} alt={contact.mascotAlt} loading="lazy" />
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
