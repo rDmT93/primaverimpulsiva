@@ -59,6 +59,7 @@ export interface Translations {
     info: { label: string; value: string; href?: string }[]
     whatsapp: string
     whatsappMessage: string
+    instagram: string
     form: {
       name: string
       email: string
@@ -168,6 +169,7 @@ const translations: Record<Lang, Translations> = {
       lead: 'Contacte-nos para um orçamento gratuito e sem compromisso.',
       whatsapp: 'Falar no WhatsApp',
       whatsappMessage: 'Olá! Gostaria de pedir um orçamento.',
+      instagram: 'Seguir no Instagram',
       info: [
         { label: 'Telefone', value: '(+351) 934867205', href: 'tel:+351934867205' },
         { label: 'Email', value: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' },
@@ -279,6 +281,7 @@ const translations: Record<Lang, Translations> = {
       lead: 'Contact us for a free, no-obligation quote.',
       whatsapp: 'Chat on WhatsApp',
       whatsappMessage: "Hello! I'd like to request a quote.",
+      instagram: 'Follow on Instagram',
       info: [
         { label: 'Phone', value: '(+351) 934867205', href: 'tel:+351934867205' },
         { label: 'Email', value: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' },

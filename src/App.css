@@ -738,20 +738,57 @@ body:has(.photo-gallery[open]) {
   padding: 24px 0;
 }
 
-.btn-whatsapp {
-  gap: 10px;
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 28px;
-  background: #128c7e;
+}
+
+.btn-whatsapp,
+.btn-instagram {
+  gap: 10px;
   color: #fff;
+}
+
+.btn-whatsapp {
+  background: #128c7e;
 }
 
 .btn-whatsapp:hover {
   background: #0e7266;
 }
 
-.btn-whatsapp svg {
+.btn-instagram {
+  background: var(--ink);
+}
+
+.btn-instagram:hover {
+  background: var(--ink-light);
+}
+
+.btn-whatsapp svg,
+.btn-instagram svg {
   width: 20px;
   height: 20px;
+}
+
+.btn-instagram svg {
+  color: #d9b371;
+}
+
+.footer-social {
+  display: inline-flex;
+  color: #d9b371;
+}
+
+.footer-social:hover {
+  color: #fff;
+}
+
+.footer-social svg {
+  width: 26px;
+  height: 26px;
 }
 
 .form-honeypot {
