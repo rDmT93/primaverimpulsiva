@@ -1,4 +1,5 @@
 import { useLanguage } from '../i18n/LanguageContext.tsx'
+import ServiceIllustration from './ServiceIllustration.tsx'
 
 function Services() {
   const { t } = useLanguage()
@@ -13,7 +14,10 @@ function Services() {
 
         <div className="services-grid">
           {services.items.map((service) => (
-            <div className="service-card" key={service.title}>
+            <div className="service-card" key={service.icon}>
+              <div className="service-media">
+                <ServiceIllustration name={service.icon} />
+              </div>
               <h3>{service.title}</h3>
               <p>{service.text}</p>
             </div>

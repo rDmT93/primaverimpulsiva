@@ -1,4 +1,13 @@
 export type Lang = 'pt' | 'en'
+export type ValueIcon = 'quality' | 'team' | 'deadline' | 'safety'
+export type ServiceIcon =
+  | 'construction'
+  | 'plumbing'
+  | 'climate'
+  | 'electrical'
+  | 'airconditioning'
+  | 'vacuum'
+  | 'ventilation'
 
 export interface Translations {
   nav: {
@@ -23,13 +32,13 @@ export interface Translations {
     eyebrow: string
     title: string
     paragraphs: string[]
-    values: { title: string; text: string }[]
+    values: { icon: ValueIcon; title: string; text: string }[]
   }
   services: {
     eyebrow: string
     title: string
     lead: string
-    items: { title: string; text: string }[]
+    items: { icon: ServiceIcon; title: string; text: string }[]
   }
   projects: {
     eyebrow: string
@@ -73,9 +82,9 @@ const translations: Record<Lang, Translations> = {
       name: 'Primaverimpulsiva',
     },
     hero: {
-      eyebrow: 'Empreiteiro Geral · Fundada em 1998',
-      title: 'A Construir Bases Sólidas para o Seu Futuro',
-      lead: 'A Primaverimpulsiva entrega projetos residenciais e comerciais dentro do prazo e do orçamento, do primeiro desenho à entrega final.',
+      eyebrow: 'Primaveraimpulsiva · Empresa de Construção Civil',
+      title: 'Reabilitamos o Passado. Construímos o Futuro.',
+      lead: 'A Primaveraimpulsiva é especializada na reabilitação de ruínas e edifícios, com soluções chave na mão que aliam rigor, qualidade e atenção ao detalhe.',
       ctaPrimary: 'Pedir Orçamento Gratuito',
       ctaSecondary: 'Os Nossos Serviços',
       stats: [
@@ -88,35 +97,46 @@ const translations: Record<Lang, Translations> = {
       eyebrow: 'Quem Somos',
       title: 'Uma Equipa em Quem Pode Confiar',
       paragraphs: [
-        'Há mais de 25 anos que a Primaverimpulsiva trabalha com proprietários, empresas e promotores para transformar projetos em espaços concluídos. Da abertura do estaleiro à inspeção final, a nossa equipa interna de gestores de projeto, carpinteiros e outros profissionais trata de cada detalhe, para que não tenha de se preocupar.',
-        'Somos um empreiteiro geral local, totalmente licenciado e segurado, orgulhosos de construir os espaços onde a nossa comunidade vive, trabalha e cresce.',
+        'Somos uma empresa de Construção Civil especializada na reabilitação e transformação de espaços, combinando experiência, rigor técnico e atenção ao detalhe em cada projeto.',
+        'Da reabilitação integral de edifícios e ruínas aos acabamentos mais exigentes, assumimos todas as etapas da obra para garantir uma execução rigorosa, eficiente e de elevada qualidade.',
+        'Através de um serviço chave na mão, asseguramos a coordenação de todas as especialidades e intervenientes, proporcionando-lhe a tranquilidade de ter um único parceiro responsável por todo o projeto.',
+        'Do primeiro traço ao último detalhe, transformamos a sua visão num espaço com qualidade, identidade e valor.',
       ],
       values: [
         {
-          title: 'Qualidade na Construção',
-          text: 'Cada projeto é construído de acordo com as normas em vigor e além delas, com materiais de confiança e mão de obra especializada.',
+          icon: 'quality',
+          title: 'Qualidade em Cada Detalhe',
+          text: 'Materiais de confiança e acabamentos cuidados, do primeiro alicerce ao último retoque.',
         },
         {
-          title: 'Entrega no Prazo',
-          text: 'Um planeamento claro e uma comunicação honesta mantêm o seu projeto em andamento, sem surpresas.',
+          icon: 'team',
+          title: 'Profissionais Qualificados',
+          text: 'Equipas experientes e especializadas em cada área, da construção às instalações técnicas.',
         },
         {
-          title: 'Segurança em Primeiro Lugar',
-          text: 'As nossas equipas seguem normas de segurança rigorosas em todos os estaleiros, grandes ou pequenos.',
+          icon: 'deadline',
+          title: 'Compromisso com o Prazo',
+          text: 'Planeamento claro e comunicação honesta para cumprir o que combinámos, sem surpresas.',
+        },
+        {
+          icon: 'safety',
+          title: 'Segurança em 1º Lugar',
+          text: 'Normas de segurança rigorosas em todas as obras, para proteger quem trabalha e quem nos confia o projeto.',
         },
       ],
     },
     services: {
       eyebrow: 'O Que Fazemos',
       title: 'Serviços Adaptados ao Seu Projeto',
-      lead: 'Quer esteja a iniciar uma construção nova ou a reimaginar um espaço existente, trazemos as pessoas, o equipamento e a experiência necessários.',
+      lead: 'Quer pretenda reabilitar uma ruína, transformar um espaço existente ou instalar um sistema de climatização, reunimos as pessoas, os recursos e a experiência necessários para concretizar o seu projeto.',
       items: [
-        { title: 'Construção Residencial', text: 'Moradias construídas à medida, desenhadas de acordo com o seu estilo de vida.' },
-        { title: 'Construção Comercial', text: 'Obras de retalho, escritórios e indústria, entregues dentro do prazo e do orçamento.' },
-        { title: 'Renovações e Remodelações', text: 'Cozinhas, casas de banho, ampliações e remodelações completas, bem feitas.' },
-        { title: 'Gestão de Projeto', text: 'Um único ponto de contacto responsável por licenças, subempreiteiros e prazos.' },
-        { title: 'Design e Construção', text: 'Arquitetura e construção sob o mesmo teto, do conceito à conclusão.' },
-        { title: 'Eletricidade e Canalização', text: 'Profissionais licenciados que tratam desde as instalações até aos acabamentos finais.' },
+        { icon: 'construction', title: 'Construção Civil', text: 'Obras residenciais, comerciais e industriais.' },
+        { icon: 'plumbing', title: 'Canalização', text: 'Instalação e manutenção de redes hidráulicas.' },
+        { icon: 'climate', title: 'Climatização', text: 'Instalação e manutenção de sistemas de climatização.' },
+        { icon: 'electrical', title: 'Eletricidade', text: 'Instalações elétricas gerais e manutenção.' },
+        { icon: 'airconditioning', title: 'Ar Condicionado', text: 'Instalação e manutenção de ar condicionado.' },
+        { icon: 'vacuum', title: 'Aspiração Central', text: 'Instalação de sistemas de aspiração central.' },
+        { icon: 'ventilation', title: 'Ventilação Mecânica', text: 'Instalação e manutenção de sistemas de ventilação.' },
       ],
     },
     projects: {
@@ -131,12 +151,10 @@ const translations: Record<Lang, Translations> = {
     contact: {
       eyebrow: 'Fale Connosco',
       title: 'Vamos Falar Sobre o Seu Projeto',
-      lead: 'Contacte-nos para um orçamento gratuito e sem compromisso. Normalmente respondemos no prazo de um dia útil.',
+      lead: 'Contacte-nos para um orçamento gratuito e sem compromisso.',
       info: [
-        { label: 'Telefone', value: '(555) 123-4567', href: 'tel:+15551234567' },
-        { label: 'Email', value: 'info@primaverimpulsiva.com', href: 'mailto:info@primaverimpulsiva.com' },
-        { label: 'Morada', value: '482 Industrial Way, Springfield, ST 62704' },
-        { label: 'Horário', value: 'Seg–Sex: 7h00 – 17h00' },
+        { label: 'Telefone', value: '(+351) 934867205', href: 'tel:+351934867205' },
+        { label: 'Email', value: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' },
       ],
       form: {
         name: 'Nome',
@@ -188,16 +206,24 @@ const translations: Record<Lang, Translations> = {
       ],
       values: [
         {
-          title: 'Quality Craftsmanship',
-          text: 'Every project is built to code and beyond, using trusted materials and skilled trades.',
+          icon: 'quality',
+          title: 'Quality in Every Detail',
+          text: 'Trusted materials and careful finishes, from the first foundation to the final touch.',
         },
         {
-          title: 'On-Time Delivery',
-          text: 'Clear scheduling and honest communication keep your project moving without surprises.',
+          icon: 'team',
+          title: 'Qualified Professionals',
+          text: 'Experienced crews specialised in every trade, from construction to technical installations.',
         },
         {
+          icon: 'deadline',
+          title: 'Commitment to Deadlines',
+          text: 'Clear planning and honest communication to deliver what we promised, with no surprises.',
+        },
+        {
+          icon: 'safety',
           title: 'Safety First',
-          text: 'Our crews follow strict safety standards on every job site, big or small.',
+          text: 'Strict safety standards on every job site, protecting the people who build and the clients who trust us.',
         },
       ],
     },
@@ -206,12 +232,13 @@ const translations: Record<Lang, Translations> = {
       title: 'Services Built Around Your Project',
       lead: "Whether you're breaking ground on something new or reimagining an existing space, we bring the people, equipment, and experience to get it done.",
       items: [
-        { title: 'Residential Construction', text: 'Custom home builds designed and constructed around the way you live.' },
-        { title: 'Commercial Construction', text: 'Retail, office, and industrial builds delivered on schedule and on budget.' },
-        { title: 'Renovations & Remodeling', text: 'Kitchens, bathrooms, additions, and whole-home renovations done right.' },
-        { title: 'Project Management', text: 'A single point of contact overseeing permits, subcontractors, and timelines.' },
-        { title: 'Design-Build Services', text: 'Architecture and construction under one roof, from concept to completion.' },
-        { title: 'Electrical & Plumbing', text: 'Licensed trades handling rough-in through final fixtures on every job.' },
+        { icon: 'construction', title: 'Civil Construction', text: 'Residential, commercial and industrial works.' },
+        { icon: 'plumbing', title: 'Plumbing', text: 'Installation and maintenance of water and hydraulic networks.' },
+        { icon: 'climate', title: 'Climate Control', text: 'Installation and maintenance of climate control systems.' },
+        { icon: 'electrical', title: 'Electrical', text: 'General electrical installations and maintenance.' },
+        { icon: 'airconditioning', title: 'Air Conditioning', text: 'Installation and maintenance of air conditioning.' },
+        { icon: 'vacuum', title: 'Central Vacuum', text: 'Installation of central vacuum systems.' },
+        { icon: 'ventilation', title: 'Mechanical Ventilation', text: 'Installation and maintenance of ventilation systems.' },
       ],
     },
     projects: {
