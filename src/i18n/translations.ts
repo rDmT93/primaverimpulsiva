@@ -60,6 +60,7 @@ export interface Translations {
     whatsapp: string
     whatsappMessage: string
     instagram: string
+    mascotAlt: string
     form: {
       name: string
       email: string
@@ -170,6 +171,7 @@ const translations: Record<Lang, Translations> = {
       whatsapp: 'Falar no WhatsApp',
       whatsappMessage: 'Olá! Gostaria de pedir um orçamento.',
       instagram: 'Seguir no Instagram',
+      mascotAlt: 'Gato com capacete de obra',
       info: [
         { label: 'Telefone', value: '(+351) 934867205', href: 'tel:+351934867205' },
         { label: 'Email', value: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' },
@@ -282,6 +284,7 @@ const translations: Record<Lang, Translations> = {
       whatsapp: 'Chat on WhatsApp',
       whatsappMessage: "Hello! I'd like to request a quote.",
       instagram: 'Follow on Instagram',
+      mascotAlt: 'Cat wearing a hard hat',
       info: [
         { label: 'Phone', value: '(+351) 934867205', href: 'tel:+351934867205' },
         { label: 'Email', value: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' },

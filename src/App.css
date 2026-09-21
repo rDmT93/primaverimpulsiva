@@ -738,6 +738,21 @@ body:has(.photo-gallery[open]) {
   padding: 24px 0;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-mascot {
+  flex: 1 1 0;
+  min-height: 160px;
+  width: 100%;
+  margin-top: 20px;
+  object-fit: contain;
+  object-position: left bottom;
+  mix-blend-mode: multiply;
+}
+
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
@@ -853,6 +868,11 @@ body:has(.photo-gallery[open]) {
   .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-mascot {
+    flex: none;
+    height: 220px;
   }
 
   .service-card {
