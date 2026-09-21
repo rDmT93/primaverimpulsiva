@@ -570,6 +570,44 @@
   padding: 24px 0;
 }
 
+.btn-whatsapp {
+  gap: 10px;
+  margin-top: 28px;
+  background: #128c7e;
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background: #0e7266;
+}
+
+.btn-whatsapp svg {
+  width: 20px;
+  height: 20px;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-error {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #fdecea;
+  color: #8a1f17;
+  font-size: 0.9rem;
+}
+
+.contact-form .btn:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
 /* Footer */
 .site-footer {
   background: var(--ink);

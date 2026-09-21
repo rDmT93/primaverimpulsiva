@@ -50,6 +50,8 @@ export interface Translations {
     title: string
     lead: string
     info: { label: string; value: string; href?: string }[]
+    whatsapp: string
+    whatsappMessage: string
     form: {
       name: string
       email: string
@@ -58,6 +60,9 @@ export interface Translations {
       submit: string
       successTitle: string
       successText: string
+      sending: string
+      errorTitle: string
+      errorText: string
     }
   }
   footer: {
@@ -152,6 +157,8 @@ const translations: Record<Lang, Translations> = {
       eyebrow: 'Fale Connosco',
       title: 'Vamos Falar Sobre o Seu Projeto',
       lead: 'Contacte-nos para um orçamento gratuito e sem compromisso.',
+      whatsapp: 'Falar no WhatsApp',
+      whatsappMessage: 'Olá! Gostaria de pedir um orçamento.',
       info: [
         { label: 'Telefone', value: '(+351) 934867205', href: 'tel:+351934867205' },
         { label: 'Email', value: 'primaverimpulsiva.lda@gmail.com', href: 'mailto:primaverimpulsiva.lda@gmail.com' },
@@ -164,6 +171,9 @@ const translations: Record<Lang, Translations> = {
         submit: 'Enviar Mensagem',
         successTitle: 'Obrigado pelo contacto!',
         successText: 'Recebemos a sua mensagem e entraremos em contacto brevemente.',
+        sending: 'A enviar...',
+        errorTitle: 'Não foi possível enviar a mensagem.',
+        errorText: 'Tente novamente ou contacte-nos diretamente por email ou telefone.',
       },
     },
     footer: {
@@ -254,6 +264,8 @@ const translations: Record<Lang, Translations> = {
       eyebrow: 'Get In Touch',
       title: "Let's Talk About Your Project",
       lead: 'Reach out for a free, no-obligation estimate. We typically respond within one business day.',
+      whatsapp: 'Chat on WhatsApp',
+      whatsappMessage: "Hello! I'd like to request a quote.",
       info: [
         { label: 'Phone', value: '(555) 123-4567', href: 'tel:+15551234567' },
         { label: 'Email', value: 'info@primaverimpulsiva.com', href: 'mailto:info@primaverimpulsiva.com' },
@@ -268,6 +280,9 @@ const translations: Record<Lang, Translations> = {
         submit: 'Send Message',
         successTitle: 'Thanks for reaching out!',
         successText: "We've received your message and will be in touch soon.",
+        sending: 'Sending...',
+        errorTitle: "We couldn't send your message.",
+        errorText: 'Please try again, or contact us directly by email or phone.',
       },
     },
     footer: {
