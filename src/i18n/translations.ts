@@ -1,5 +1,6 @@
 export type Lang = 'pt' | 'en'
 export type ValueIcon = 'quality' | 'team' | 'deadline' | 'safety'
+export type ProjectId = 'ruin'
 export type ServiceIcon =
   | 'construction'
   | 'plumbing'
@@ -43,7 +44,13 @@ export interface Translations {
   projects: {
     eyebrow: string
     title: string
-    items: { title: string; category: string }[]
+    items: { id: ProjectId; title: string; category: string }[]
+    viewPhotos: string
+    before: string
+    after: string
+    close: string
+    previous: string
+    next: string
   }
   contact: {
     eyebrow: string
@@ -147,11 +154,13 @@ const translations: Record<Lang, Translations> = {
     projects: {
       eyebrow: 'Trabalhos Recentes',
       title: 'Um Histórico que Fala por Si',
-      items: [
-        { title: 'Residência Rua do Bosque', category: 'Residencial' },
-        { title: 'Parque de Escritórios Harbor View', category: 'Comercial' },
-        { title: 'Renovação de Loft no Centro', category: 'Renovação' },
-      ],
+      items: [{ id: 'ruin', title: 'Reabilitação de Ruína', category: 'Reabilitação' }],
+      viewPhotos: 'Ver fotografias',
+      before: 'Antes',
+      after: 'Depois',
+      close: 'Fechar',
+      previous: 'Fotografia anterior',
+      next: 'Fotografia seguinte',
     },
     contact: {
       eyebrow: 'Fale Connosco',
@@ -254,11 +263,13 @@ const translations: Record<Lang, Translations> = {
     projects: {
       eyebrow: 'Recent Work',
       title: 'A Track Record You Can See',
-      items: [
-        { title: 'Maple Street Residence', category: 'Residential' },
-        { title: 'Harbor View Office Park', category: 'Commercial' },
-        { title: 'Downtown Loft Renovation', category: 'Renovation' },
-      ],
+      items: [{ id: 'ruin', title: 'Ruin rehabilitation', category: 'Rehabilitation' }],
+      viewPhotos: 'View photos',
+      before: 'Before',
+      after: 'After',
+      close: 'Close',
+      previous: 'Previous photo',
+      next: 'Next photo',
     },
     contact: {
       eyebrow: 'Get In Touch',
