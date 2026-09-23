@@ -26,6 +26,7 @@ export interface Translations {
     lead: string
     ctaPrimary: string
     ctaSecondary: string
+    flyerAlt: string
     stats: { value: string; label: string }[]
   }
   about: {
@@ -100,6 +101,7 @@ const translations: Record<Lang, Translations> = {
       lead: 'A Primaveraimpulsiva é especializada na reabilitação de ruínas e edifícios, com soluções chave na mão que aliam rigor, qualidade e atenção ao detalhe.',
       ctaPrimary: 'Pedir Orçamento Gratuito',
       ctaSecondary: 'Os Nossos Serviços',
+      flyerAlt: 'Folheto da Primaverimpulsiva com os serviços e contactos',
       stats: [
         { value: '25+', label: 'Anos de experiência' },
         { value: '400+', label: 'Projetos concluídos' },
@@ -221,6 +223,7 @@ const translations: Record<Lang, Translations> = {
       lead: 'Primaverimpulsiva specialises in the rehabilitation of ruins and buildings, with turnkey solutions that combine rigour, quality and attention to detail.',
       ctaPrimary: 'Request a Free Quote',
       ctaSecondary: 'Our Services',
+      flyerAlt: 'Primaverimpulsiva flyer with services and contact details',
       stats: [
         { value: '25+', label: 'Years of experience' },
         { value: '400+', label: 'Projects completed' },
